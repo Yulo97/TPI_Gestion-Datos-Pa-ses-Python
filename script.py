@@ -89,7 +89,7 @@ def find_pais(paises, nombre_pais):
 
 # Funcion para actualizar superfice
 def update_pais(paises):
-    nombre_pais = input("Ingresa el nombre del pais a actualizar: ")
+    nombre_pais = input("Ingresa el nombre del pais a actualizar: ").lower()
     pais_encontrado = ""
 
     for pais in paises:
@@ -126,7 +126,7 @@ def filter_paises(paises):
     opcion_filtro = input("Ingresa una opcion: ")
 
     if(opcion_filtro == "1"):
-        continente = input("Ingresa un continente: ")
+        continente = input("Ingresa un continente: ").lower()
 
         for pais in paises:
             if(continente.lower() == pais["continente"].lower()):
