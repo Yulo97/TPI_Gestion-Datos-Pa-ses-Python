@@ -106,8 +106,8 @@ def find_pais(paises, nombre_pais):
 
 # Funcion para actualizar superficie y poblacion
 def update_pais(paises):
-    nombre_pais = input("Ingresa el nombre del pais a actualizar: ").strip().lower()
-    pais_encontrado = None
+    nombre_pais = input("Ingresa el nombre del pais a actualizar: ")
+    pais_encontrado = ""
 
     for pais in paises:
         if nombre_pais == pais["nombre"].lower():
@@ -148,8 +148,9 @@ def filter_paises(paises):
     opcion_filtro = input("Ingresa una opcion: ")
     resultados = []
 
-    if opcion_filtro == "1":
-        continente = input("Ingresa un continente: ").strip().lower()
+    if(opcion_filtro == "1"):
+        continente = input("Ingresa un continente: ")
+
         for pais in paises:
             if continente == pais["continente"].lower():
                 resultados.append(pais)
