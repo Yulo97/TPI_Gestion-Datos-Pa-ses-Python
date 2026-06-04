@@ -106,8 +106,8 @@ def find_pais(paises, nombre_pais):
 
 # Funcion para actualizar superficie y poblacion
 def update_pais(paises):
-    nombre_pais = input("Ingresa el nombre del pais a actualizar: ")
-    pais_encontrado = ""
+    nombre_pais = input("Ingresa el nombre del pais a actualizar: ").strip().lower()
+    pais_encontrado = None
 
     for pais in paises:
         if nombre_pais == pais["nombre"].lower():
@@ -130,6 +130,7 @@ def update_pais(paises):
     except Exception as e:
         print(f"Error al guardar el archivo: {e}")
 
+# Funcion para escribir los datos en el archivo CSV
 def write_file_paises(paises):
     # Reescribir el archivo CSV con el nuevo país
     with open("paises.csv", "w", encoding="utf8", newline="") as f:
@@ -139,6 +140,7 @@ def write_file_paises(paises):
         for pais in paises:
             writer.writerow(pais)
 
+# Funcion para filtrar paises por continente, poblacion o superficie
 def filter_paises(paises):
     print("-----OPCIONES-----")
     print("1 - Filtrar por Continente")
@@ -149,7 +151,7 @@ def filter_paises(paises):
     resultados = []
 
     if(opcion_filtro == "1"):
-        continente = input("Ingresa un continente: ")
+        continente = input("Ingresa un continente: ").strip().lower()
 
         for pais in paises:
             if continente == pais["continente"].lower():
@@ -184,6 +186,7 @@ def filter_paises(paises):
     else:
         print("No se encontraron paises con esos criterios.")
 
+# Funcion para mostrar y ordenar paises por nombre, poblacion o superficie
 def mostrar_paises(paises):
     print("-----OPCIONES-----")
     print("1 - Ordenar por nombre")
@@ -211,7 +214,7 @@ def mostrar_paises(paises):
     for pais in paises_ordenados:
         print(pais)
 
-
+# Funcion para mostrar estadisticas de los paises
 def mostrar_estadisticas(paises):
     if not paises:
         print("No hay datos de paises para mostrar estadisticas.")
