@@ -1,5 +1,8 @@
 import csv
 
+##########################
+####### GIULIANO #########
+##########################
 # Funcion principal
 def main():
     print("-----OPCIONES-----")
@@ -129,6 +132,10 @@ def update_pais(paises):
         print("Error: Debes ingresar valores numericos validos.")
     except Exception as e:
         print(f"Error al guardar el archivo: {e}")
+
+##########################
+####### VIRGINIA #########
+##########################
 
 # Funcion para escribir los datos en el archivo CSV
 def write_file_paises(paises):
