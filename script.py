@@ -3,6 +3,10 @@ import csv
 ##########################
 ####### GIULIANO #########
 ##########################
+
+### EXPLICAR PROBLEMA PLANTEADO
+### ESTRUCTURA DE DATOS
+
 # Funcion principal
 def main():
     print("-----OPCIONES-----")
@@ -107,6 +111,10 @@ def find_pais(paises, nombre_pais):
     else:
         print("No se encontro ningun pais con ese nombre.")
 
+##########################
+####### VIRGINIA #########
+##########################
+
 # Funcion para actualizar superficie y poblacion
 def update_pais(paises):
     nombre_pais = input("Ingresa el nombre del pais a actualizar: ").strip().lower()
@@ -132,10 +140,6 @@ def update_pais(paises):
         print("Error: Debes ingresar valores numericos validos.")
     except Exception as e:
         print(f"Error al guardar el archivo: {e}")
-
-##########################
-####### VIRGINIA #########
-##########################
 
 # Funcion para escribir los datos en el archivo CSV
 def write_file_paises(paises):
